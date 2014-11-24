@@ -35,7 +35,7 @@ output$echo_request <- renderUI({
 })
 
 output$summary_request <- renderUI({
-  if( (input$showtable != 0) & (isolate(input$choose_columns) != 0) ) {
+  if( (input$showtable != 0) & (input$choose_columns != 0) ) {
     isolate(HTML(paste(c("Summary of the ", input$choose_columns, " column") ,collapse=''))) 
   }
 })
